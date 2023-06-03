@@ -237,7 +237,10 @@ export default function Record({
   return (
     <>
       <div className="img-area">
-        <img src={`../../public/images/${currentMusic.img}.jpg`} alt="" />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/${currentMusic.img}.jpg`}
+          alt="Music Cover"
+        />
       </div>
       <div className="song-details">
         <p className="name">{currentMusic.name}</p>
@@ -252,14 +255,15 @@ export default function Record({
       </div>
       <a
         className="download"
-        href={`../../public/music/${currentMusic.src}.mp3`}
+        href={`${process.env.PUBLIC_URL}/music/${currentMusic.src}.mp3`}
         download={`${currentMusic.name}(${currentMusic.artist})`}
         id="audio-download"
       >
         <audio
           ref={audioRef}
-          src={`../../public/music/${currentMusic.src}.mp3`}
+          src={`${process.env.PUBLIC_URL}/music/${currentMusic.src}.mp3`}
           id="main-audio"
+          type="audio/mp3"
         ></audio>
         <i className="material-icons">download_for_offline</i>
       </a>
