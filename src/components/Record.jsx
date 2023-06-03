@@ -237,7 +237,7 @@ export default function Record({
   return (
     <>
       <div className="img-area">
-        <img src={`/images/${currentMusic.img}.jpg`} alt="" />
+        <img src={`../../public/images/${currentMusic.img}.jpg`} alt="" />
       </div>
       <div className="song-details">
         <p className="name">{currentMusic.name}</p>
@@ -252,13 +252,13 @@ export default function Record({
       </div>
       <a
         className="download"
-        href={`/music/${currentMusic.src}.mp3`}
+        href={`../../public/music/${currentMusic.src}.mp3`}
         download={`${currentMusic.name}(${currentMusic.artist})`}
         id="audio-download"
       >
         <audio
           ref={audioRef}
-          src={`/music/${currentMusic.src}.mp3`}
+          src={`../../public/music/${currentMusic.src}.mp3`}
           id="main-audio"
         ></audio>
         <i className="material-icons">download_for_offline</i>

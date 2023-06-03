@@ -129,7 +129,7 @@ export default function MusicList({
               </div>
               <audio
                 className={music.src}
-                src={`/music/${music.src}.mp3`}
+                src={`../../public/music/${music.src}.mp3`}
                 id={music.src}
               ></audio>
               <span id={music.src} className="audio-duration">
