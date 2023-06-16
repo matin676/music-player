@@ -149,6 +149,30 @@ let allMusic = [
     img: "music-25",
     src: "music-25",
   },
+  {
+    name: "Angel Pt2",
+    artist: "Charlie Puth,Jimin,JVKE Λ Muni Long",
+    img: "music-26",
+    src: "music-26",
+  },
+  {
+    name: "Calling",
+    artist: "Metro Boomin, NAV Λ Swae Lee",
+    img: "music-27",
+    src: "music-27",
+  },
+  {
+    name: "Silk Λ Cologne ",
+    artist: "Ei8ht Λ Offset",
+    img: "music-28",
+    src: "music-28",
+  },
+  {
+    name: "My City",
+    artist: "G Herbo, 24KGoldn Λ Kane Brown",
+    img: "music-29",
+    src: "music-29",
+  },
 ];
 
 export default allMusic;
