@@ -238,7 +238,7 @@ export default function Record({
     <>
       <div className="img-area">
         <img
-          src={`${process.env.PUBLIC_URL}/images/${currentMusic.img}.jpg`}
+          src={`${process.env.PUBLIC_URL}/images/${currentMusic.img}.webp`}
           alt="Music Cover"
         />
       </div>
