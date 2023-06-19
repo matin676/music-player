@@ -29,19 +29,25 @@ export default function Controls({
       >
         {repeatMode}
       </i>
-      <i id="prev" className="material-icons" onClick={skipToPrevious}>
-        skip_previous
-      </i>
-      <div className="play-pause" onClick={togglePlay}>
-        {isPlaying ? (
-          <i className="material-icons">pause</i>
-        ) : (
-          <i className="material-icons">play_arrow</i>
-        )}
+      <div className="main-controls">
+        <div className="skip-prev">
+          <i id="prev" className="material-icons" onClick={skipToPrevious}>
+            skip_previous
+          </i>
+        </div>
+        <div className="play-pause" onClick={togglePlay}>
+          {isPlaying ? (
+            <i className="material-icons">pause</i>
+          ) : (
+            <i className="material-icons">play_arrow</i>
+          )}
+        </div>
+        <div className="skip-next">
+          <i id="next" className="material-icons" onClick={skipToNext}>
+            skip_next
+          </i>
+        </div>
       </div>
-      <i id="next" className="material-icons" onClick={skipToNext}>
-        skip_next
-      </i>
       <i id="more-music" className="material-icons" onClick={toggleMusicList}>
         queue_music
       </i>

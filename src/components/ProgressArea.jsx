@@ -2,13 +2,15 @@ import React, { useEffect, useRef, useState } from "react";
 import allMusic from "../music-list";
 import Controls from "./Controls";
 import MusicList from "./MusicList";
+import ImgArea from "./ImgArea";
+import SongDetails from "./SongDetails";
 
-export default function Record({
+export default function ProgressArea({
   currentPlayMusic,
   listDuration,
   durationLimit,
 }) {
-  let [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const currentMusic = allMusic[currentIndex];
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -67,7 +69,7 @@ export default function Record({
 
   const getRandomIndex = () => {
     const newIndex = Math.floor(Math.random() * allMusic.length);
-    return newIndex !== currentIndex ? newIndex : getRandomIndex();
+    return newIndex !== currentSongIndex ? newIndex : getRandomIndex();
   };
 
   const formatTime = (time) => {
@@ -236,15 +238,14 @@ export default function Record({
 
   return (
     <>
-      <div className="img-area">
-        <img
-          src={`${process.env.PUBLIC_URL}/images/${currentMusic.img}.webp`}
-          alt="Music Cover"
+      <div className="record">
+        <ImgArea currentMusic={currentMusic} />
+        <MusicList
+          onLiClick={handleLiClick}
+          isPaused={isPaused}
+          currentSongIndex={currentSongIndex}
+          currentPlayingMusic={currentMusic.src}
         />
-      </div>
-      <div className="song-details">
-        <p className="name">{currentMusic.name}</p>
-        <p className="artist">{currentMusic.artist}</p>
       </div>
       <div className="progress-area" onClick={handleProgressBarClick}>
         <div className="progress-bar" style={{ width: `${progress}%` }}></div>
@@ -267,22 +268,19 @@ export default function Record({
         ></audio>
         <i className="material-icons">download_for_offline</i>
       </a>
-      <Controls
-        isPlaying={isPlaying}
-        togglePlay={togglePlay}
-        skipToNext={skipToNext}
-        skipToPrevious={skipToPrevious}
-        repeatMode={repeatMode}
-        toggleRepeatMode={toggleRepeatMode}
-        toggleMusicList={toggleMusicList}
-        currentSongIndex={currentSongIndex}
-      />
-      <MusicList
-        onLiClick={handleLiClick}
-        isPaused={isPaused}
-        currentSongIndex={currentSongIndex}
-        currentPlayingMusic={currentMusic.src}
-      />
+      <div className="details-controls">
+        <SongDetails currentMusic={currentMusic} />
+        <Controls
+          isPlaying={isPlaying}
+          togglePlay={togglePlay}
+          skipToNext={skipToNext}
+          skipToPrevious={skipToPrevious}
+          repeatMode={repeatMode}
+          toggleRepeatMode={toggleRepeatMode}
+          toggleMusicList={toggleMusicList}
+          currentSongIndex={currentSongIndex}
+        />
+      </div>
     </>
   );
 }
