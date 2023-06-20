@@ -75,6 +75,11 @@ body {
   margin: 5rem;
 }
 
+.top-bar {
+  position: relative;
+  top: 1rem;
+}
+
 .top-bar span {
   transform: translateX(3rem);
   font-size: 2.3rem;
@@ -261,6 +266,7 @@ ul li.playing {
 }
 
 .controls {
+  position: absolute;
   transform: translate(53rem, -10.25rem);
 }
 
@@ -331,11 +337,11 @@ ul li.playing {
   .wrapper {
     display: flex;
     flex-direction: column;
-    inset: 0;
+    inset: 5rem 0 0 0;
     margin: auto 0;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 108vh;
   }
   .record {
     flex-direction: column;
@@ -357,6 +363,7 @@ ul li.playing {
     margin-top: 3rem;
   }
   .details-controls {
+    position: initial;
     margin-top: -1rem;
   }
   .song-details {
@@ -366,7 +373,7 @@ ul li.playing {
     align-items: center;
     margin-top: 2.2rem;
     margin-left: auto;
-    bottom: 10rem;
+    bottom: 8.5rem;
   }
   .song-details .name {
     font-size: 21px;
@@ -379,14 +386,14 @@ ul li.playing {
   .progress-area {
     width: 80%;
     margin-left: -0.7rem;
-    margin-top: 10rem;
+    margin-top: 7rem;
   }
   .download {
     left: 44%;
     top: -1rem;
   }
   .controls {
-    margin: 60px 0 5px 0;
+    margin: 5rem 0 1rem 0;
     position: relative !important;
     transform: translate(0, -9rem);
   }
@@ -404,8 +411,7 @@ ul li.playing {
     margin-left: -13px;
   }
   .music-list {
-    transform: translateX(0.2rem);
-    left: 0;
+    left: 13rem;
     bottom: -55%;
     opacity: 0;
     pointer-events: none;
