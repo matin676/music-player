@@ -44,6 +44,7 @@ body {
 }
 
 .wrapper {
+  user-select: none;
   width: 100%;
   height: -webkit-fill-available;
   overflow: hidden;
