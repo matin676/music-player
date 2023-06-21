@@ -254,7 +254,7 @@ ul li.playing {
   text-align: start;
   color: #ffffff;
   margin-left: 5rem;
-  bottom: 6rem;
+  bottom: 9rem;
 }
 
 .song-details .name {
@@ -268,7 +268,8 @@ ul li.playing {
 
 .controls {
   position: absolute;
-  transform: translate(53rem, -10.25rem);
+  left: 53rem;
+  bottom: 9.5rem;
 }
 
 .controls i {
@@ -398,7 +399,8 @@ ul li.playing {
   .controls {
     margin: 5rem 0 1rem 0;
     position: relative !important;
-    transform: translate(0, -9rem);
+    left: 0;
+    bottom: 9rem;
   }
   .controls i {
     font-size: 35px;
