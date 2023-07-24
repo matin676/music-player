@@ -173,6 +173,18 @@ let allMusic = [
     img: "music-29",
     src: "music-29",
   },
+  {
+    name: "Catch Me If I Fall",
+    artist: "NEFFEX",
+    img: "music-30",
+    src: "music-30",
+  },
+  {
+    name: "By My Side [NCS Release]",
+    artist: "Acejax feat. Danilyon",
+    img: "music-31",
+    src: "music-31",
+  },
 ];
 
 export default allMusic;
