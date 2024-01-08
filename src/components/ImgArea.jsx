@@ -10,6 +10,7 @@ export default function ImgArea({ currentMusic }) {
         <img
           src={`${process.env.PUBLIC_URL}/images/${currentMusic.img}.webp`}
           alt="Music Cover"
+          loading="lazy"
         />
       </div>
     </div>
